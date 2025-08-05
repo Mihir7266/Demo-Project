@@ -1,87 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Our Projects</title>
-  <link rel="stylesheet" href="project.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - ArchiWeb</title>
+  <link rel="stylesheet" href="about.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 </head>
 <body>
-  <header>
+  <header class="header">
     <div class="logo" id="scrollTopBtn">ArchiWeb</div>
     <nav>
       <ul>
         <li><a href="demo1.html">Home</a></li>
-        <li><a href="project.html" class="active">Projects</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="#"><i class="fas fa-search"></i></a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="main">
-    <h1>Our Projects</h1>
-    <p>Our standout portfolio—interior, exterior, furniture & architecture.</p>
+  <section class="about-hero">
+    <div class="overlay">
+      <h1>About ArchiWeb</h1>
+      <p>Timeless. Thoughtful. Transformative Design.</p>
+    </div>
   </section>
 
-  <section class="projects">
-    <div class="project-grid">
-      <div class="card">
-        <img src="project1.png" alt="Modern Living Room">
-        <div class="card-content">
-          <h3>Modern Living Room</h3>
-          <p>A serene interior blending natural light, minimalist furniture, and soft textures.</p>
-          <a href="#">Read More</a>
+  <section class="about-info">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4">
+          <img src="about.png" alt="Studio" class="img-fluid rounded shadow">
         </div>
-      </div>
-      <div class="card">
-        <img src="project2.png" alt="Luxury Villa Exterior">
-        <div class="card-content">
-          <h3>Luxury Villa Exterior</h3>
-          <p>Clean-facing villa with expansive glass walls, a pool deck, and indoor-outdoor flow.</p>
-          <a href="#">Read More</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="project3.png" alt="Urban Entryway Design">
-        <div class="card-content">
-          <h3>Urban Entryway Design</h3>
-          <p>Entry space with precise lighting, geometric finishes, and modern minimalist appeal.</p>
-          <a href="#">Read More</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="project4.png" alt="Scandinavian Living Room">
-        <div class="card-content">
-          <h3>Scandinavian Living Room</h3>
-          <p>Soft tones, light woods, and open space create a calm and cozy living area.</p>
-          <a href="#">Read More</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="project5.png" alt="Poolside Patio Retreat">
-        <div class="card-content">
-          <h3>Poolside Patio Retreat</h3>
-          <p>Aqua tiles, shaded loungers, and natural materials define this tranquil outdoor space.</p>
-          <a href="#">Read More</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="project6.png" alt="Contemporary Kitchen">
-        <div class="card-content">
-          <h3>Contemporary Kitchen</h3>
-          <p>Clean cabinetry, matte accents, and smart layout combine form and function.</p>
-          <a href="#">Read More</a>
+        <div class="col-md-6">
+          <h2>Our Story</h2>
+          <p>Founded in Berlin, ArchiWeb is a creative architecture and design studio focused on functionality, style, and sustainability. We work on residential, commercial, and bespoke projects that reflect your identity and values.</p>
+          <p>With a team of passionate architects and designers, we turn ideas into immersive spaces through a collaborative and personalized process. We believe great design inspires, supports well-being, and endures over time.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <footer id="footer">
+  <section class="mission-section">
+    <div class="container text-center">
+      <h2>Our Mission</h2>
+      <p class="lead">To create meaningful spaces that enhance daily life and connect people to their environment.</p>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <div class="container text-center">
+      <h2>Meet Our Team</h2>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-4">
+          <img src="james.png" class="rounded-circle mb-2" width="120" alt="Team Member">
+          <h5>James Passaquindici</h5>
+          <p>Founder & Principal Architect</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="abram.png" class="rounded-circle mb-2" width="120" alt="Team Member">
+          <h5>Abram Schleifer</h5>
+          <p>Lead Designer</p>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+ <footer id="footer">
     <div class="footer-content">
       <div>
         <h3>ArchiWeb</h3>
@@ -138,5 +129,7 @@
     .bindPopup('ArchiWeb Office - Berlin')
     .openPopup();
 </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -3,78 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>ArchiWeb</title>
   <link rel="stylesheet" href="demo1.css" />
-  
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
 </head>
 <body>
-
   <header>
-    <div class="logo">ArchiWeb</div>
+    <div class="logo" id="scrollTopBtn">ArchiWeb</div>
     <nav>
       <ul>
-        <li><a href="#" class="active">Home</a></li>
+        <li><a href="demo1.html" class="active">Home</a></li>
         <li><a href="project.html">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#footer">Contact</a></li>
-        <li><i class="fas fa-search"></i></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#"><i class="fas fa-search"></i></a></li>
       </ul>
     </nav>
   </header>
-   <section class="hero">
+
+  <section class="hero">
     <div class="hero-bac"></div>
-  <div class="hero-overlay">
-    <h1>Best Solution For<br>Your Home</h1>
-    <p>Discover innovative, stylish, and functional designs tailored to your lifestyle. Let us help you create a space that feels like home.
-
-</p>
-  </div>
-
-  <div class="hero-nav">
-    <button><i class="fas fa-arrow-left"></i></button>
-    <button><i class="fas fa-arrow-right"></i></button>
-  </div>
-</section>
-
- <section class="services">
-  <h2>Our Services</h2>
-  <div class="service-boxes">
-    
-    <div>
-      <img src="Group4.png" alt="Planning">
-      <h3>Planning</h3>
-      <p>Smart site analysis & layout design<br>Transforming vision into detailed plans</p>
+    <div class="hero-text">
+      <h1>Best Solution For<br>Your Home</h1>
+      <p>Discover innovative, stylish, and functional designs tailored to your lifestyle. Let us help you create a space that feels like home.</p>
     </div>
-
-    <div>
-      <img src="Group6.png" alt="Interior">
-      <h3>Interior</h3>
-      <p>Stylish, functional spaces you’ll love<br>Customized to match your lifestyle</p>
+    <div class="hero-nav">
+      <button><i class="fas fa-arrow-left"></i></button>
+      <button><i class="fas fa-arrow-right"></i></button>
     </div>
+  </section>
 
-    <div>
-      <img src="Group5.png" alt="Exterior">
-      <h3>Exterior</h3>
-      <p>Modern facades with lasting appeal<br>Enhancing structure and style</p>
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-boxes">
+      <div>
+        <img src="Group4.png" alt="Planning">
+        <h3>Planning</h3>
+        <p>Smart site analysis & layout design<br>Transforming vision into detailed plans</p>
+      </div>
+      <div>
+        <img src="Group6.png" alt="Interior">
+        <h3>Interior</h3>
+        <p>Stylish, functional spaces you'll love<br>Customized to match your lifestyle</p>
+      </div>
+      <div>
+        <img src="Group5.png" alt="Exterior">
+        <h3>Exterior</h3>
+        <p>Modern facades with lasting appeal<br>Enhancing structure and style</p>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <section class="about">
+    <img src="about.png" alt="plan" />
+    <div class="about-content">
+      <h2>About Us</h2>
+      <p>We are a creative architecture and interior design studio committed to delivering thoughtful, timeless, and sustainable spaces. With a focus on functionality and aesthetics, we work closely with clients to transform ideas into stunning environments—residential, commercial, or beyond.</p>
+      <p>From initial planning to final execution, our experienced team ensures every detail is crafted with precision, passion, and purpose. We believe great design has the power to elevate everyday life.</p>
+    </div>
+  </section>
 
-
-<section class="about">
-  <img src="about.png" alt="plan" />
-  <div class="about-content">
-    <h2>About Us</h2>
-    <p>We are a creative architecture and interior design studio <br> committed to delivering thoughtful, timeless, and sustainable spaces. <br> With a focus on functionality and aesthetics, we work closely with clients to <br> transform ideas into stunning environments—residential, commercial, or beyond.</p>
-    
-    <p>From initial planning to final execution, our experienced team ensures every <br> detail is crafted with precision, passion, and purpose. We believe great <br> design has the power to elevate everyday life.</p>
-  </div>
-</section>
-
-   <section class="projects" id="project">
+  <section class="projects" id="project">
     <h2>Our Projects</h2>
     <div class="filters">
       <button class="active" onclick="filterProjects('all')">All</button>
@@ -82,95 +74,111 @@
       <button onclick="filterProjects('design')">Design</button>
       <button onclick="filterProjects('house')">House</button>
     </div>
-    <div class="project-pic">
-      <div class="project furniture">
-        <img src="project1.png" alt="Modern Dining Room" />
-        <p>
-          <strong>Modern Dining Room</strong><br>
-          A sleek dining space featuring a glass-top table.
-          Surrounded by windows that fill the room with light, perfect for both daily meals and formal gatherings.
-          <a href="#">Read more</a>
-        </p>
+     <div class="project-grid">
+      
+        <div class="project furniture">
+          <div class="card">
+          <img src="project1.png" alt="Modern Living Room">
+          <div class="card-content">
+            <h3>Modern Living Room</h3>
+            <p>A serene interior blending natural light, minimalist furniture, and soft textures.</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
       </div>
-      <div class="project house">
-        <img src="project2.png" alt="Luxury Villa" />
-        <p>
-          <strong>Luxury Villa</strong><br>
-          A waterfront villa with bold modern architecture.
-          Featuring an infinity pool, panoramic views, and seamless indoor-outdoor transitions for luxury living.
-          <a href="#">Read more</a>
-        </p>
+      
+        <div class="project house">
+          <div class="card">
+          <img src="project2.png" alt="Luxury Villa Exterior">
+          <div class="card-content">
+            <h3>Luxury Villa Exterior</h3>
+            <p>Clean-facing villa with expansive glass walls, a pool deck, and indoor-outdoor flow.</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
       </div>
-      <div class="project design">
-        <img src="project3.png" alt="Urban Entryway" />
-        <p>
-          <strong>Urban Entryway</strong><br>
-          Minimalist design with geometric lines and lighting.
-          Perfectly balancing security and beauty at the front facade of a modern home.
-          <a href="#">Read more</a>
-        </p>
+      
+        <div class="project design">
+          <div class="card">
+          <img src="project3.png" alt="Urban Entryway Design">
+          <div class="card-content">
+            <h3>Urban Entryway Design</h3>
+            <p>Entry space with precise lighting, geometric finishes, and modern minimalist appeal.</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="project-pic1">
-      <div class="project furniture">
-        <img src="project4.png" alt="Contemporary Kitchen" />
-        <p>
-          <strong>Contemporary Kitchen</strong><br>
-          Warm wood finishes combined with matte black accents create a modern yet natural kitchen environment. Equipped with smart appliances and an efficient workflow layout.<br>
-          <a href="#">Read more</a>
-      </p>
+      
+        <div class="project furniture">
+          <div class="card">
+          <img src="project4.png" alt="Scandinavian Living Room">
+          <div class="card-content">
+            <h3>Scandinavian Living Room</h3>
+            <p>Soft tones, light woods, and open space create a calm and cozy living area.</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
       </div>
-      <div class="project design">
-        <img src="project5.png" alt="Poolside Patio" />
-        <p>
-          <strong>Poolside Patio</strong><br>
-          Outdoor living at its finest: an aqua-tiled plunge pool, rustic textures, and a shaded lounge space make this patio the perfect escape for comfort and calm.<br>
-          <a href="#">Read more</a>
-        </p>
+      
+        <div class="project design">
+          <div class="card">
+          <img src="project5.png" alt="Poolside Patio Retreat">
+          <div class="card-content">
+            <h3>Poolside Patio Retreat</h3>
+            <p>Aqua tiles, shaded loungers, and natural materials define this tranquil outdoor space.</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
       </div>
-      <div class="project house">
-        <img src="project6.png" alt="Modern Suburban Home" />
-        <p>
-          <strong>Modern Suburban Home</strong><br>
-          A family-oriented home with clean surfaces, symmetrical elevation, and warm exterior lighting for a timeless, welcoming presence in a growing neighborhood.<br>
-          <a href="#">Read more</a>
-        </p>
+      
+        <div class="project house">
+          <div class="card">
+          <img src="project6.png" alt="Contemporary Kitchen">
+          <div class="card-content">
+            <h3>Contemporary Kitchen</h3>
+            <p>Clean cabinetry, matte accents, and smart layout combine form and function.</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
       </div>
-    </div>
+
+     </div>
+   
+    
   </section>
-<section class="testimonials">
+
+  <section class="testimonials">
     <h2>Testimonial</h2>
     <div class="testimonial-box">
       <div>
         <img src="james.png" alt="James Passaquindici Arcand">
         <h4>James Passaquindici Arcand</h4>
         <h5>Client & Design Enthusiast</h5>
-        <p>“The design team brought my vision to life. Their attention to detail created a home that truly reflects who I am.”</p>
+        <p>"The design team brought my vision to life. Their attention to detail created a home that truly reflects who I am."</p>
       </div>
       <div>
         <img src="abram.png" alt="Abram Schleifer">
         <h4>Abram Schleifer</h4>
         <h5>Client & Design Advocate</h5>
-        <p>“Working with the team transformed my ideas into a refined, living space. The attention to every detail made all the difference.”</p>
+        <p>"Working with the team transformed my ideas into a refined, living space. The attention to every detail made all the difference."</p>
       </div>
     </div>
   </section>
 
-
-   <footer>
-    <div class="footer-content" id="footer">
+  <footer id="footer">
+    <div class="footer-content">
       <div>
         <h3>ArchiWeb</h3>
-        <p>Archiweb is an architectural consultant<br>based in Berlin, Germany. We provide<br> solutions for your architecture<br> and residential design</p>
+        <p>Archiweb is an architectural consultant based in Berlin, Germany. We provide solutions for your architecture and residential design</p>
         <div class="socials">
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-instagram"></i>
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
       <div>
         <h4>Articles</h4>
-        <ul>
+        <ul style="list-style: none; padding: 0;">
           <li>7 Tips for Kids Friendly Interior</li>
           <li>Smart Tips for Changing a Room</li>
           <li>Eco-friendly design</li>
@@ -178,21 +186,44 @@
       </div>
       <div>
         <h4>Links</h4>
-        <ul>
-          <li>Link 1</li>
-          <li>Link 2</li>
-          <li>Link 3</li>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="demo1.html">Home</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </div>
       <div>
         <h4>Location</h4>
-        <div id="map" style="height: 150px; width: 150px;"></div>
-
+        <div id="map" style="height: 150px; width: 150px; background: #ccc; margin: 0 auto;"></div>
       </div>
     </div>
   </footer>
-  <script src="demo1.js" defer></script>
+ <div id="image-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <img id="modal-img" src="" alt="">
+    <div class="modal-text">
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  const map = L.map('map').setView([52.5200, 13.4050], 13); // Berlin
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.marker([52.5200, 13.4050]).addTo(map)
+    .bindPopup('ArchiWeb Office - Berlin')
+    .openPopup();
+</script>
 
 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="demo1.js"></script>
 </body>
 </html>
