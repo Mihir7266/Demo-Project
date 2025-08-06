@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -12,17 +13,20 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
-  background: white;
+  background: black;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.logo {
+#logo {
   font-size: 1.5rem;
   font-weight: bold;
   display: flex;
+  color: #e2dfdf;
 }
+
+
 
 nav ul {
   display: flex;
@@ -35,7 +39,7 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   display: flex;
-  color: #333;
+  color: #e2dfdf;
   font-size: 1rem;
 }
 
@@ -116,55 +120,205 @@ nav ul li a.active {
   object-fit: cover;
 }
 
-footer {
-  background: #2e2f32;
-  color: #fff;
-  padding: 40px 5%;
+/* CTA Section */
+.cta-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+  color: white;
+  text-align: center;
 }
 
-.footer-content {
+.cta-section h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-.footer-content > div {
-  flex: 1;
-  min-width: 200px;
+/* Footer */
+.footer {
+  padding: 4rem 0 2rem;
+  background: #2c3e50;
+  color: white;
 }
 
-.footer-content img {
-  width: 100px;
-  margin-top: 10px;
+.footer-brand h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  color: #bdc3c7;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #34495e;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: #3498db;
+  transform: translateY(-2px);
+}
+
+.footer h4 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #3498db;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #bdc3c7;
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #34495e;
+}
+
+.footer-bottom p {
+  color: #bdc3c7;
+  margin-bottom: 0;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+  font-size: 0.9rem;
+  color: #bdc3c7;
+  text-decoration: none;
+}
+
+.footer-bottom-links a:hover {
+  color: #3498db;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  .about-info .container, .team-section .container {
+    max-width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+@media (max-width: 900px) {
   .header {
     flex-direction: column;
-    padding: 15px;
+    padding: 15px 2%;
   }
-  
   nav ul {
-    gap: 15px;
-    margin-top: 15px;
+    gap: 16px;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+  .about-info .row {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .about-info img {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .about-hero {
+    height: 220px;
+  }
   .about-hero h1 {
     font-size: 2rem;
   }
-  
-  .about-hero p {
-    font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .about-info {
+    padding: 32px 2%;
   }
-  
+  .mission-section, .team-section {
+    padding: 32px 2%;
+  }
+  .footer-content > div {
+    min-width: 0;
+  }
   .team-section .row {
     flex-direction: column;
-    gap: 30px;
+    gap: 18px;
   }
 }
+@media (max-width: 600px) {
+  .about-hero h1 {
+    font-size: 1.2rem;
+  }
+  .about-info, .mission-section, .team-section {
+    padding: 12px 2px;
+  }
+  .footer-content {
+    gap: 8px;
+  }
+  .footer-content > div {
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 400px) {
+  .about-hero h1 {
+    font-size: 1rem;
+  }
+  .footer-content h3 {
+    font-size: 1.1rem;
+  }
+}
+
