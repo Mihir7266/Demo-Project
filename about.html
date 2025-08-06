@@ -2,70 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact | ArchiWeb</title>
-
-  <link rel="stylesheet" href="demo1.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-  <link rel="stylesheet" href="contact.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - ArchiWeb</title>
+  <link rel="stylesheet" href="about.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
-
-
   <header class="header">
-    <div id="logo" onclick="window.location.href='demo1.html';">ArchiWeb</div>
+    <div id="logo" onclick="window.location.href='index.html';">ArchiWeb</div>
+
     <nav>
       <ul>
         <li><a href="demo1.html">Home</a></li>
         <li><a href="project.html">Projects</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-        <li><i class="fas fa-search"></i></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#"><i class="fas fa-search"></i></a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="contact-section" style="padding: 60px 5%;">
-    <h2>Contact Us</h2>
-    <p style="max-width: 600px;">Got a project in mind or just want to chat about design? Fill out the form below or reach us through our location.</p>
+  <section class="about-hero">
+    <div class="overlay">
+      <h1>About ArchiWeb</h1>
+      <p>Timeless. Thoughtful. Transformative Design.</p>
+    </div>
+  </section>
 
-    <div class="row mt-5">
-      <div class="col-md-6">
-       <form action="https://formspree.io/f/xblkzyqg" method="POST" id="contact-form">
-  <div class="mb-3">
-    <label for="name" class="form-label">Full Name</label>
-    <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
-  </div>
-  <div class="mb-3">
-    <label for="email" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="your@email.com" required>
-  </div>
-  <div class="mb-3">
-    <label for="message" class="form-label">Message</label>
-    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-  </div>
-  <button type="submit" class="btn btn-dark">Send Message</button>
-</form>
-
-      </div>
-
-      <div class="col-md-6 mt-4 mt-md-0">
-        <h4>Our Office</h4>
-        <p>Berlin, Germany</p>
-        <p>Email: hello@archiweb.com</p>
-        <p>Phone: +49 123 456 789</p>
-
-        <div id="map" style="height: 300px; width: 100%; background-color: #eee;">
-          
-          
+  <section class="about-info">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4">
+          <img src="about.png" alt="Studio" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+          <h2>Our Story</h2>
+          <p>Founded in Berlin, ArchiWeb is a creative architecture and design studio focused on functionality, style, and sustainability. We work on residential, commercial, and bespoke projects that reflect your identity and values.</p>
+          <p>With a team of passionate architects and designers, we turn ideas into immersive spaces through a collaborative and personalized process. We believe great design inspires, supports well-being, and endures over time.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="mission-section">
+    <div class="container text-center">
+      <h2>Our Mission</h2>
+      <p class="lead">To create meaningful spaces that enhance daily life and connect people to their environment.</p>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <div class="container text-center">
+      <h2>Meet Our Team</h2>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-4">
+          <img src="james.png" class="rounded-circle mb-2" width="120" alt="Team Member">
+          <h5>James Passaquindici</h5>
+          <p>Founder & Principal Architect</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="abram.png" class="rounded-circle mb-2" width="120" alt="Team Member">
+          <h5>Abram Schleifer</h5>
+          <p>Lead Designer</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="man.png" class="rounded-circle mb-2" width="120" alt="Team Member">
+          <h5>Laurence Llewelyn</h5>
+          <p>Interior designer</p>
+        </div>
+       
+      </div>
+    </div>
+  </section>
 
   <section class="cta-section" id="contact">
     <div class="container">
@@ -115,7 +126,7 @@
         </div>
         <div class="col-lg-3 col-md-6">
           <h4>Location</h4>
-          
+          <div id="map" style="height: 150px; width: 100%; background: #ccc; border-radius: 10px;"></div>
           <div class="contact-info mt-3">
             <p><i class="fas fa-map-marker-alt"></i> Berlin, Germany</p>
             <p><i class="fas fa-phone"></i> +49 123 456 789</p>
@@ -139,9 +150,19 @@
       </div>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="contact.js" defer></script>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth" // Smooth scroll effect
+    });
+  });
+});
+  </script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
   const map = L.map('map').setView([52.5200, 13.4050], 13); // Berlin
 
@@ -153,5 +174,7 @@
     .bindPopup('ArchiWeb Office - Berlin')
     .openPopup();
 </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
